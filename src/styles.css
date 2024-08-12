@@ -8,6 +8,23 @@ body {
   margin: 0 auto;
 }
 
+.grid {
+  display: grid;
+  grid-gap: 40px;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.grid-vertical-center {
+  align-items: center;
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/hero.jpg");
@@ -18,9 +35,19 @@ header {
   padding: 160px 80px;
 }
 
-h1,
-h2,
-h3 {
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 40px;
+}
+
+main {
+  background-color: white;
+}
+
+header h1,
+header h2,
+header h3 {
   color: white;
   margin: 0;
 }
@@ -69,6 +96,10 @@ header a:hover {
   transition: all 140ms ease-in;
 }
 
+.img-responsive {
+  max-width: 100%;
+}
+
 @media (max-width: 900px) {
   header {
     padding: 80px 20px;
@@ -87,6 +118,31 @@ header a:hover {
   }
 }
 
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #7c776bcc;
+  margin: 0;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #023020;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
     url("../images/footer.jpg");
@@ -97,9 +153,6 @@ footer {
 }
 
 .footer-menus {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-column-gap: 40px;
   color: white;
 }
 
@@ -129,7 +182,20 @@ footer p {
   margin: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  img {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
   footer {
     padding: 45px 20px;
   }
@@ -141,16 +207,19 @@ footer p {
     margin-top: 16px;
   }
 
-  .footer-menus {
-    grid-template-columns: 1fr;
-  }
-
   .more-about-menu {
     margin-top: 0;
   }
 
-  .my-connection-menu,
-  .about-website-menu {
+  .my-connection-menu {
     margin-top: 30px;
+  }
+
+  .about-website-menu {
+    margin: 30px 0;
+  }
+
+  section {
+    padding: 30px;
   }
 }
