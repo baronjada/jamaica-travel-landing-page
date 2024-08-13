@@ -3,28 +3,6 @@ body {
   background-color: #7c776b;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.grid {
-  display: grid;
-  grid-gap: 40px;
-}
-
-.grid-2-columns {
-  grid-template-columns: 1fr 1fr;
-}
-
-.grid-3-columns-first-narrow {
-  grid-template-columns: 1fr 2fr 2fr;
-}
-
-.grid-vertical-center {
-  align-items: center;
-}
-
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url("../images/hero.jpg");
@@ -33,16 +11,6 @@ header {
   background-repeat: no-repeat;
   text-align: center;
   padding: 160px 80px;
-}
-
-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 90px 40px;
-}
-
-main {
-  background-color: white;
 }
 
 header h1,
@@ -96,10 +64,85 @@ header a:hover {
   transition: all 140ms ease-in;
 }
 
+main {
+  background-color: white;
+}
+
+section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+section.secondary {
+  background-color: #e3e0d6;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 40px;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  background-color: white;
+  margin-top: 30px;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-footer {
+  padding: 8px 30px 30px 30px;
+}
+
+.btn {
+  display: block;
+  background-color: #023020;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.btn:hover {
+  background-color: #555966;
+  transition: 120ms all ease-in-out;
+}
+
+.grid-vertical-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .img-responsive {
   max-width: 100%;
 }
-
 @media (max-width: 900px) {
   header {
     padding: 80px 20px;
@@ -136,6 +179,23 @@ main h3 {
   margin: 0;
 }
 
+main h4 {
+  color: #023020;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+
+  margin: 0;
+}
+
+main h5 {
+  color: #7c776b;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1;
+}
+
 main p {
   font-style: normal;
   font-weight: 300;
@@ -149,7 +209,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 90px 40px;
+  padding: 100px;
 }
 
 .footer-menus {
@@ -189,15 +249,19 @@ footer p {
   }
 }
 
-@media (min-width: 900px) and (max-width: 1200px) {
+/* @media (min-width: 900px) and (max-width: 1200px) {
   img {
     display: none;
   }
-}
+} */
 
 @media (max-width: 960px) {
   footer {
-    padding: 45px 20px;
+    padding: 30px;
+  }
+
+  section {
+    padding: 30px;
   }
 
   .more-about-content,
@@ -217,9 +281,5 @@ footer p {
 
   .about-website-menu {
     margin: 30px 0;
-  }
-
-  section {
-    padding: 30px;
   }
 }
